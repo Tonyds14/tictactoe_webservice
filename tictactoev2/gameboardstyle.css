@@ -1,0 +1,139 @@
+body {
+    background-image: url("images/boardimage2.png");
+    /* background-image: url("images/boardbackground.png"); */
+    /* background-size: cover; */
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+#waiting {
+    margin-top: 10px;
+    display: none;
+}
+
+#youwin {
+    margin-top: 10px;
+    display: none;
+}
+
+#youlose {
+    margin-top: 10px;
+    display: none;
+}
+
+#draw {
+    margin-top: 10px;
+    display: none;
+}
+
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 2px solid #2b5d87;
+    box-shadow: 0 0 0 2px #2b5d87;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+    /* color: #59515E; */
+    font-weight: bold;
+    background-color: white;
+}
+
+.cell.X {
+    /* color: #DF8BA4; */
+    /* color: #CD5C5C; */
+    color: #CF352E;
+  }
+  
+.cell.O {
+    /* color: #F09030; */
+    /* color: #B65FCF; */
+    color: #4683B7;
+}
+
+#gameContainer{
+    /* font-family: "Permanent Marker", cursive; */
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+#topfiller {
+    margin-top: 15px;
+}
+
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+
+/* #restartBtn {
+    color: white;
+    font-weight: bold;
+    background-color: #e74c3c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+#resetButton {
+    color: white;
+    font-weight: bold;
+    background-color: #e74c3c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#quitGame {
+    color: white;
+    font-weight: bold;
+    background-color: #c62828; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+h1 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color:#2b5d87;
+    font-family: Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color:#2b5d87;
+    font-family: Helvetica, sans-serif;
+}
+
+h3 {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color:#2b5d87;
+    font-family: Helvetica, sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+    color:#2b5d87;
+}
+
+p {
+    font-size: 15px;
+    margin-top: 15px;
+    color:#2b5d87;
+    font-family: Helvetica, sans-serif;
+}
+

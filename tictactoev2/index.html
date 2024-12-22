@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Main</title>
+    <link rel="stylesheet" href="indexstyle.css" />
+  </head>
+  <body>
+    <div class="page" id="homepage">
+      <h2 id="topfiller">Let's Play</h2>
+      <h1>Tic Tac Toe!</h2>
+      <form id="gameForm">
+        <div class="form-row">
+          <input
+            type="text"
+            id="inputPlayerID"
+            name="inputPlayerID"
+            placeholder="Player ID (Required)"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <input
+            type="text"
+            id="inputGameID"
+            name="inputGameID"
+            placeholder="Game ID (Required)"
+            required
+          />
+        </div>
+        <button type="submit" id="joinGame" class="button">Join Game</button>
+        <a id="historyLink" disabled>History</a>
+      </form>
+      <p id="message1"></p>
+      <p id="message2"></p>
+      <p id="webservice-response"></p>
+      <div id="tictactoe">
+        <img
+          src="images/gif tictactoe2.gif"
+          alt="tictactoe gif"
+          style="height: 150px"
+        />
+      </div>
+    </div>
+
+    <div class="page" id="historypage">
+      <h2 id="topfiller"></h2>
+      <h1>Game History</h1>
+      <form id="historyForm">
+        <label for="historyInputPlayerID">Player ID:</label>
+        <input
+          type="text"
+          id="historyInputPlayerID"
+          name="historyInputPlayerID"
+          placeholder="Enter player ID"
+          required
+        />
+        <button type="submit">Get Player Data</button>
+      </form>
+      <h2 id="listgames-header"></h2>
+      <div id="tableContainer"></div>
+      <h3 id="gamedetails-header"></h3>
+      <div id="tableContainer2"></div>
+      <p id="historywebservice-response"></p>
+      <button id="gotoHomepageBtn3">Go back to Homepage</button>
+      <div id="tictactoe">
+        <img
+          src="images/gif dancing bear.gif"
+          alt="bear gif"
+          style="height: 150px"
+        />
+      </div>
+    </div>
+    <script src="indexJS.js"></script>
+  </body>
+</html>
