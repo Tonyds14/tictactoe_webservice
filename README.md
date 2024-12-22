@@ -8,23 +8,7 @@ Create a webservice that is able to -
 1. store the playername and it's games.
 2. store the games and list the moves performed in that game.
 3. Data will be save in folder "records", with sub-folder "games" and "players"
-4. for the game,
-file name will be the name of the Game/Game ID, and will store the movements made on that game. sample below
-file Name: "hello.txt"
-content as follows;
-hello,ton,X,0,2023-08-02 19:11:13
-hello,ton2,O,1,2023-08-02 19:11:15
-hello,ton,X,6,2023-08-02 19:11:16
-hello,ton2,O,4,2023-08-02 19:11:18
-
-5. for the players.
-file name will be the name of the player, and content will be the games that the player joined. sample below
-file name: "ton.txt"
-content as follows;
-hello
-hello1
-
-add functionality in the front end for user option 
+4. add functionality in the front end for user option 
 - to list all the games for a player
 - to list all the moves performed on the game.
 
@@ -33,6 +17,11 @@ Pre-requisites
 1. Add/install the payara server in eclipse IDE.
 - in eclipse IDE, go to tab "Help" - select "Market Place", and search "Payara", then click "install".
 - restart eclipse IDE when prompted.
+- 
+![marketplace_payara](https://github.com/user-attachments/assets/68f85a85-017d-4a09-940c-1329d98bdfa2)
+
+![adding payara server](https://github.com/user-attachments/assets/207153af-010c-4efc-954b-171872f7dfed)
+
 2. Add the payara server.
 Go to Window > Show View > Servers (if the Servers view is not already open).
 In the Servers view, click New Server (or right-click and choose New > Server).
@@ -54,6 +43,9 @@ Note: in Eclipse IDE, "Servers" tab - "Payara" domain - should have status of "S
 right-click the java project, and drag to the "Servers" - under "Payara"
 application/java project will be added and will have status of "Started,Synchronized"
 
+![deploying java project in payara thru eclipse](https://github.com/user-attachments/assets/f16091a3-a874-4f97-92ed-b06ff17e49c4)
+
+![payara admin console_post deploy app](https://github.com/user-attachments/assets/a90fb766-70b6-4fc8-b249-ea715a92e484)
 
 5. check the payara admin console
 http://localhost:4848
@@ -68,3 +60,25 @@ base url
 
 sample
 http://localhost:8080/WebService/server2/rest/
+
+Launching the game:
+1. download "tictactoev2" and import to vs codes to open the html, css, and js.
+2. right-click on the "index.html" and open with liveserver.
+
+Sample Output
+
+![sample_output1](https://github.com/user-attachments/assets/3f57a65a-64b9-49f0-b40c-e59f2ac3559f)
+
+![sample_output2](https://github.com/user-attachments/assets/1db6f2b5-1f90-4e4a-b2d1-c637be57f581)
+
+![error1](https://github.com/user-attachments/assets/05625af6-130d-405a-a6f1-4a4b9b84faf7)
+
+![waiting](https://github.com/user-attachments/assets/b5b6ab78-dc93-4d67-9e91-0941e8c7109a)![Uploading error1.jpg…]()
+
+![game_end](https://github.com/user-attachments/assets/5e6a91c9-0d49-45ae-af67-029410cdc470)
+
+![history1](https://github.com/user-attachments/assets/c2893587-15e8-4e3b-9074-fbe23e0a1b17)
+
+![history2](https://github.com/user-attachments/assets/52922ce5-54dd-4782-b594-50755edaf235)
+
+![history3](https://github.com/user-attachments/assets/2dd01c0c-54ef-4d6e-8138-6f613a0d411a)
