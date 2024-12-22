@@ -7,13 +7,14 @@ import java.io.IOException;
 
 public class SaveGame {
 	
-	//@work
+	static //@work
 //	private static String projectPath = "C:\\BA Training\\Application Server\\FileSystemWebService\\WebService\\";
 	
 	//@home
 //	private static String projectPath = "C:\\Users\\USER\\eclipse-workspace\\WebService\\";
-	private static String projectPath = "C:\\Users\\Tony\\git\\repository11\\WebService\\";
-//	private static String projectPath = getProjectPath();
+//	private static String projectPath = "C:\\Users\\Tony\\git\\repository11\\WebService\\";
+	dummyMain dM = new dummyMain();
+	private static String projectPath = dM.getProjectPath();
 	
 //	private static String projectPath = System.getProperty("user.dir");
 	// System.getProperty("user.dir") was being pointed to : C:\BA Training\UI UX\payara\payara5\glassfish\domains\domain1\config\records
@@ -24,11 +25,6 @@ public class SaveGame {
     private static String fileGamePath = projectPath + File.separator + recordsGamesDirectory;
     private static String filePlayerPath = projectPath + File.separator + recordsPlayersDirectory;
     
-	public static String getProjectPath() {
-		String pPath = System.getProperty("user.dir");
-		System.out.println("Project path: " +pPath);
-		return pPath;
-	}
     
     public String saveGameFile(String gameID, String fileContent, String playerID) {
     	
@@ -157,6 +153,13 @@ public class SaveGame {
     public String checkGame(String gameID) {
     	String fileGameName = gameID+".txt";
     	File file = new File(fileGamePath, fileGameName);
+    	
+    	System.out.println("fileGameName: " + fileGameName);
+        System.out.println("Project Path: " + projectPath);
+        System.out.println("Records Games Directory: " + recordsGamesDirectory);
+        System.out.println("File Game Path: " + fileGamePath);
+        System.out.println("Full File Path: " + file.getAbsolutePath());
+        System.out.println("File Exists: " + file.exists());
     	
     	String checkGameOutput ="";
 

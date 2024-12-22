@@ -8,22 +8,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListGames {
-	//@work
+	static //@work
 //	private static String projectPath = "C:\\BA Training\\Application Server\\FileSystemWebService\\WebService\\";
 	
 	//@home
 //	private static String projectPath = "C:\\Users\\USER\\eclipse-workspace\\WebService\\";
-	private static String projectPath = "C:\\Users\\Tony\\git\\repository11\\WebService\\";
-//	private static String projectPath = getProjectPath();
+//	private static String projectPath = "C:\\Users\\Tony\\git\\repository11\\WebService\\";
+	dummyMain dM = new dummyMain();
+	private static String projectPath = dM.getProjectPath();
+	
 	private static String recordsPlayersDirectory = "records/players";	
 	
     private static String filePlayerPath = projectPath + File.separator + recordsPlayersDirectory;
 	
-	public static String getProjectPath() {
-		String pPath = System.getProperty("user.dir");
-		System.out.println("Project path: " +pPath);
-		return pPath;
-	}
     
 	public String listPlayersGames(String playerID) {
 	    	

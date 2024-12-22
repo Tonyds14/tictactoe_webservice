@@ -16,13 +16,23 @@ public class dummyMain {
 //		createGameFile();
 //		readRecordPlayerText();
 //		readRecordGameText();
-		getProjectPath();
+//		getProjectPath();
+		checkGameId();
 	}
 	
-	public static void getProjectPath() {
-		String projectPath = System.getProperty("user.dir");
-		System.out.println("Project path: " +projectPath);
+	public static void checkGameId() {
+        SaveGame sg = new SaveGame();
+        String gameID = "G2";
+        String checkGameOutput = sg.checkGame(gameID);
+        System.out.println("checkGameOutput: " +checkGameOutput);
 	}
+	
+	public String getProjectPath() {
+		String projectPath = System.getProperty("user.dir") +"\\";
+		System.out.println("Project path: " +projectPath);
+		return projectPath;
+	}
+	
 	
 	
 	public static void createGameFile() {
