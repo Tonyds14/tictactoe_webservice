@@ -13,11 +13,20 @@ public class GetGames {
 //	private static String projectPath = "C:\\BA Training\\Application Server\\FileSystemWebService\\WebService\\";
 	
 	//@home
-	private static String projectPath = "C:\\Users\\USER\\eclipse-workspace\\WebService\\";
+//	private static String projectPath = "C:\\Users\\USER\\eclipse-workspace\\WebService\\";
+	private static String projectPath = "C:\\Users\\Tony\\git\\repository11\\WebService\\";
+//	private static String projectPath = getProjectPath();
+	
 	private static String recordsGamesDirectory = "records/games";	
 	
 	private static String fileGamePath = projectPath + File.separator + recordsGamesDirectory;
-		
+	
+	public static String getProjectPath() {
+		String pPath = System.getProperty("user.dir");
+		System.out.println("Project path: " +pPath);
+		return pPath;
+	}
+	
 	public String getGameRecords(String gameID) {
 		
 		String getGamesResp = "";		

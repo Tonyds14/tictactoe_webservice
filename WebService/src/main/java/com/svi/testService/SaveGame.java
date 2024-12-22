@@ -11,7 +11,9 @@ public class SaveGame {
 //	private static String projectPath = "C:\\BA Training\\Application Server\\FileSystemWebService\\WebService\\";
 	
 	//@home
-	private static String projectPath = "C:\\Users\\USER\\eclipse-workspace\\WebService\\";
+//	private static String projectPath = "C:\\Users\\USER\\eclipse-workspace\\WebService\\";
+	private static String projectPath = "C:\\Users\\Tony\\git\\repository11\\WebService\\";
+//	private static String projectPath = getProjectPath();
 	
 //	private static String projectPath = System.getProperty("user.dir");
 	// System.getProperty("user.dir") was being pointed to : C:\BA Training\UI UX\payara\payara5\glassfish\domains\domain1\config\records
@@ -21,6 +23,12 @@ public class SaveGame {
 
     private static String fileGamePath = projectPath + File.separator + recordsGamesDirectory;
     private static String filePlayerPath = projectPath + File.separator + recordsPlayersDirectory;
+    
+	public static String getProjectPath() {
+		String pPath = System.getProperty("user.dir");
+		System.out.println("Project path: " +pPath);
+		return pPath;
+	}
     
     public String saveGameFile(String gameID, String fileContent, String playerID) {
     	
