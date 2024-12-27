@@ -4,6 +4,10 @@ tictactoe_webservice
 This project is continuation of "tictactoe - html, css, js".
 "tictactoe" application should be deployed in payara.
 
+incorporated the index.html, css and js in the webapp or within the java project.
+merge the gameboard.html, css and js to index.
+"tictactoev2" - not needed anymore
+
 Create a webservice that is able to -
 1. store the playername and it's games.
 2. store the games and list the moves performed in that game.
