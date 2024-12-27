@@ -1,9 +1,11 @@
-package com.svi.testService;
+package com.svi.util;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+
+import com.svi.testService.ConfigInfo;
 
 public class SaveGame {
 	
@@ -13,17 +15,21 @@ public class SaveGame {
 	//@home
 //	private static String projectPath = "C:\\Users\\USER\\eclipse-workspace\\WebService\\";
 //	private static String projectPath = "C:\\Users\\Tony\\git\\repository11\\WebService\\";
-	dummyMain dM = new dummyMain();
-	private static String projectPath = dM.getProjectPath();
+//	dummyMain dM = new dummyMain();
+//	private static String projectPath = dM.getProjectPath();
 	
 //	private static String projectPath = System.getProperty("user.dir");
 	// System.getProperty("user.dir") was being pointed to : C:\BA Training\UI UX\payara\payara5\glassfish\domains\domain1\config\records
 	
-    private static String recordsGamesDirectory = "records/games";
-    private static String recordsPlayersDirectory = "records/players";
-
-    private static String fileGamePath = projectPath + File.separator + recordsGamesDirectory;
-    private static String filePlayerPath = projectPath + File.separator + recordsPlayersDirectory;
+//    private static String recordsGamesDirectory = "records/games";
+//    private static String recordsPlayersDirectory = "records/players";
+//
+//    private static String fileGamePath = projectPath + File.separator + recordsGamesDirectory;
+//    private static String filePlayerPath = projectPath + File.separator + recordsPlayersDirectory;
+    
+	ConfigInfo cfg = new ConfigInfo();
+	private static String fileGamePath = cfg.recordGamesPath;
+    private static String filePlayerPath = cfg.recordPlayersPath;	
     
     
     public String saveGameFile(String gameID, String fileContent, String playerID) {
@@ -155,8 +161,8 @@ public class SaveGame {
     	File file = new File(fileGamePath, fileGameName);
     	
     	System.out.println("fileGameName: " + fileGameName);
-        System.out.println("Project Path: " + projectPath);
-        System.out.println("Records Games Directory: " + recordsGamesDirectory);
+//        System.out.println("Project Path: " + projectPath);
+//        System.out.println("Records Games Directory: " + recordsGamesDirectory);
         System.out.println("File Game Path: " + fileGamePath);
         System.out.println("Full File Path: " + file.getAbsolutePath());
         System.out.println("File Exists: " + file.exists());
@@ -164,9 +170,9 @@ public class SaveGame {
     	String checkGameOutput ="";
 
         if (file.exists()) {
-        	checkGameOutput ="input Game ID already used";
+        	checkGameOutput ="Input Game ID already used";
         } else {
-        	checkGameOutput ="input Game ID can be used";
+        	checkGameOutput ="Input Game ID can be used";
         }        
         return checkGameOutput;    	
     }

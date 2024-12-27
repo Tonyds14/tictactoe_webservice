@@ -1,4 +1,4 @@
-package com.svi.testService;
+package com.svi.util;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.svi.testService.ConfigInfo;
+
 public class ListGames {
 	static //@work
 //	private static String projectPath = "C:\\BA Training\\Application Server\\FileSystemWebService\\WebService\\";
@@ -14,13 +16,15 @@ public class ListGames {
 	//@home
 //	private static String projectPath = "C:\\Users\\USER\\eclipse-workspace\\WebService\\";
 //	private static String projectPath = "C:\\Users\\Tony\\git\\repository11\\WebService\\";
-	dummyMain dM = new dummyMain();
-	private static String projectPath = dM.getProjectPath();
-	
-	private static String recordsPlayersDirectory = "records/players";	
-	
-    private static String filePlayerPath = projectPath + File.separator + recordsPlayersDirectory;
-	
+//	dummyMain dM = new dummyMain();
+//	private static String projectPath = dM.getProjectPath();
+//	
+//	private static String recordsPlayersDirectory = "records/players";	
+//	
+//    private static String filePlayerPath = projectPath + File.separator + recordsPlayersDirectory;
+    
+	ConfigInfo cfg = new ConfigInfo();
+    private static String filePlayerPath = cfg.recordPlayersPath;	
     
 	public String listPlayersGames(String playerID) {
 	    	

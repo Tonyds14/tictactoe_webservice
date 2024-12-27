@@ -1,0 +1,292 @@
+.page {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    /* justify-content: center; */
+    height: 100vh;
+    background-image: url("images/boardimage2.png");
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+
+h1, form {
+text-align: center;
+}
+  
+.button {
+display: block;
+margin: 10px auto;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-row input[type="text"] {
+    width: 200px; 
+}
+
+#topfiller {
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:#2b5d87;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:#2b5d87;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+h3 {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color:#2b5d87;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+    margin-top: 15px;
+    /* font-weight: bold; */
+    color: #336ea0;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+input {
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 4px 4px; 
+}
+
+
+
+#joinGame {
+    background-color: #013A63; /* Use the desired matte green color */
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    /* Add any additional styling you may need */
+}
+
+#joinGame:hover {
+    /* Add any additional styles you want for the button when hovering */
+    background-color: #0069D9; /* For example, change the background color on hover */
+}
+
+
+a {
+    color: #007bff; /* Blue color, you can change it to your desired color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+    font-size: 15px; /* Set the font size */
+    padding: 5px 10px; /* Add padding to create a clickable area */
+    border: 1px solid #007bff; /* Add a border around the link */
+    border-radius: 5px; /* Add rounded corners to the border */
+    font-family: Helvetica, sans-serif;
+  }
+
+  /* Style the link on hover to give it a visual feedback */
+a:hover {
+    background-color: #007bff; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+
+
+/*historystyle*/
+
+td {
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    /* font-weight: bold; */
+    padding: 5px; /* Example: Add padding to the td elements */
+    text-align: center; /* Example: Center the text in the td elements */
+    border: 1px solid #ccc; /* Example: Add border to the td elements */
+    
+
+}
+
+#tableContainer td {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px; /* Example: Add padding to the td elements */
+    text-align: center; /* Example: Center the text in the td elements */
+    border: 1px solid #ccc; /* Example: Add border to the td elements */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: white;
+}
+
+#tableContainer td:hover {
+    background-color: lightgray; /* Change the background color on hover */
+}
+
+#tableContainer {
+    margin-left: 20px; 
+}
+
+#tableContainer2 {
+    margin-left: 20px; 
+}
+
+#tictactoe {
+    margin-top: 15px;
+    margin-left: 20px; 
+}
+
+label {
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button {
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+
+    background-color: #013A63; /* Use the desired matte green color */
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-left: 12px; 
+}
+
+#gotoHomepageBtn3 {
+    background-color: #007bff; /* Set the desired background color */
+    color: #fff; /* Set the text color */
+    padding: 10px 20px; /* Optional padding for the button */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Optional border radius for rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+
+#tictactoe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*gameboard style*/
+#waiting {
+    margin-top: 10px;
+    display: none;
+}
+
+#youwin {
+    margin-top: 10px;
+    display: none;
+}
+
+#youlose {
+    margin-top: 10px;
+    display: none;
+}
+
+#draw {
+    margin-top: 10px;
+    display: none;
+}
+
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 2px solid #2b5d87;
+    box-shadow: 0 0 0 2px #2b5d87;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+    /* color: #59515E; */
+    font-weight: bold;
+    background-color: white;
+}
+
+.cell.X {
+    /* color: #DF8BA4; */
+    /* color: #CD5C5C; */
+    color: #CF352E;
+  }
+  
+.cell.O {
+    /* color: #F09030; */
+    /* color: #B65FCF; */
+    color: #4683B7;
+}
+
+#gameContainer{
+    /* font-family: "Permanent Marker", cursive; */
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+
+#restartBtn {
+    color: white;
+    font-weight: bold;
+    background-color: #e74c3c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#quitGame {
+    color: white;
+    font-weight: bold;
+    background-color: #c62828; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+    color:#2b5d87;
+}

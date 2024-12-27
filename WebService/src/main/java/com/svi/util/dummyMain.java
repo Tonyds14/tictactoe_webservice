@@ -1,4 +1,4 @@
-package com.svi.testService;
+package com.svi.util;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.svi.testService.ConfigInfo;
+
 
 public class dummyMain {
 
@@ -17,7 +19,9 @@ public class dummyMain {
 //		readRecordPlayerText();
 //		readRecordGameText();
 //		getProjectPath();
-		checkGameId();
+//		getProjectPath2();
+		getConfig();
+//		checkGameId();
 	}
 	
 	public static void checkGameId() {
@@ -31,9 +35,28 @@ public class dummyMain {
 		String projectPath = System.getProperty("user.dir") +"\\";
 		System.out.println("Project path: " +projectPath);
 		return projectPath;
+//	    String projectPath = getClass().getClassLoader().getResource("").getPath();
+//	    projectPath = projectPath.replaceFirst("^/(.:/)", "$1"); // For Windows path
+//	    System.out.println("Project path: " + projectPath);
+//	    return projectPath;	
+		
+	}
+	
+	public static void getConfig() {
+		ConfigInfo cfg = new ConfigInfo();
+		String recordGamePath = cfg.recordGamesPath;
+		System.out.println("recordGamePath : " +recordGamePath );
+		String recordPlayerPath = cfg.recordPlayersPath;
+		System.out.println("recordPlayerPath : " +recordPlayerPath );	
+		
 	}
 	
 	
+	public static void getProjectPath2() {
+		String projectPath = System.getProperty("user.dir") +"\\";
+		System.out.println("Project path: " +projectPath);
+//		return projectPath;
+	}
 	
 	public static void createGameFile() {
         String folderName = "records";
