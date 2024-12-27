@@ -61,9 +61,13 @@ base url
 sample
 http://localhost:8080/WebService/server2/rest/
 
-Launching the game:
-1. download "tictactoev2" and import to vs codes to open the html, css, and js.
-2. right-click on the "index.html" and open with liveserver.
+7. Configure/Setup the project path in config.properties to be able to save the player and game data.
+In Eclipse IDE, project folder "WebService", run the "dummyMain" - getConfig() - to identify the active working path.
+In config.properties "WebService" -> "src/main/resources" -> "config" -> config.properties, update the Records_Games, and Records_Players path accordingly.
+** map the folder path to the active working path of program.
+
+8. Launch the app.
+Open web browser and paste "http://localhost:8080/WebService/", press enter.
 
 Sample Output
 
